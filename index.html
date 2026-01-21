@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethan | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio website showcasing projects, skills, and contact information."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+        <!-- This part allows character encoding, responsive redering with phones and such, 
+         browser title, search engine title, and links my css -->
+  <body>
+    <!-- Terminal Intro -->
+    <div id="terminal-screen">
+      <div class="terminal-window">
+        <div class="terminal-header">C:\Users\guest\</div>
+        <div class="terminal-body" id="terminalBody">
+          <p>Microsoft Windows [Version 10.0.19045]</p>
+          <p>(c) Microsoft Corporation. All rights reserved.</p>
+          <br />
+          <p>Type <span class="cmd">resume.exe</span> to continue</p>
+          <br />
+          <label>
+            C:\Users\guest&gt;
+            <input type="text" id="terminalInput" autocomplete="off" autofocus />
+          </label>
+          <button id="skipIntro" class="skip-btn">Skip</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- after resume.exe portfolio content -->
+    <div id="portfolio" class="hidden">
+      <a class="skip-link" href="#main">Skip to content</a>
+
+      <header class="site-header">
+        <nav class="nav container" aria-label="Primary">
+          <a class="brand" href="#top" id="top">
+          </a>
+
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+            <span class="sr-only">Toggle navigation</span>
+            ☰
+          </button>
+
+          <div class="nav-links" id="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+              🌙
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <main id="main">
+        <!-- Top part of the website with a little box next to my name -->
+        <section class="hero">
+          <div class="container hero-grid">
+            <div class="hero-text">
+              <p class="eyebrow">15-113 Portfolio</p>
+              <h1>Hi, I’m <span class="accent">Ethan</span>.</h1>
+              <p class="subtitle">
+                I’m a student developer interested in <strong>software</strong>, <strong>security</strong>,
+                and building projects that solve real problems.
+              </p>
+
+              <div class="hero-cta">
+                <a class="btn primary" href="#projects">View Projects</a>
+                <a class="btn" href="#contact">Contact Me</a>
+              </div>
+
+              <div class="hero-links">
+                <a href="https://github.com/evo-sudo" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/ethan-vo-1a5568371" target="_blank" rel="noreferrer">LinkedIn</a>
+              </div>
+            </div>
+          <div class="hero-card" role="img" aria-label="Quick facts">
+            <!-- photo here -->
+            <img class="avatar" src="assets/headshot.jpeg" alt="Photo of Ethan Vo"/>
+            <div class="hero-card" role="img" aria-label="Quick facts">
+              <div class="card">
+                <h2 class="card-title">Quick Facts</h2>
+                <ul class="facts">
+                  <li> Pittsburgh, PA</li>
+                  <li> Carnegie Mellon University</li>
+                  <li> Interests: security, web dev, systems</li>
+                  <li> Currently learning: Python, HTML, CSS, JS</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- The about me section -->
+        <section class="section" id="about">
+          <div class="container">
+            <h2>About me</h2>
+            <p class="lead">
+              My name is Ethan Vo, I'm currently a freshman at Carnegie Mellon University majoring in information systems
+              with a concentration in Information security.
+            </p>
+            <div class="panel">
+              <h3>What I’m about</h3>
+              <p>
+                I like building reliable software, learning, and documenting what I learn. I’m especially
+                interested in cybersecurity and tools that make people safer online. Currently trying to learn Red teaming.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Project section -->
+        <section class="section" id="projects">
+          <div class="container">
+            <div class="section-head">
+              <h2>Projects</h2>
+              <p class="muted">Each project includes a description, a screenshot, and links to code (when applicable).</p>
+            </div>
+
+            <div class="grid">
+              <!-- Project 1 -->
+              <article class="project">
+                <img
+                  src="assets/Darts.png"
+                  alt="Screenshot of Project 1"
+                  loading="lazy"
+                  onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22700%22 height=%22400%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e5e7eb%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%236b7280%22 font-family=%22Arial%22 font-size=%2220%22%3EAdd assets/project1.png%3C/text%3E%3C/svg%3E';"
+                />
+                <div class="project-body">
+                  <h3>Project 1: Extreme Dartz</h3>
+                  <p>Built an interactive game called Extreme Dartz using python I learned in 15112 and the CMU_graphics library.
+                    The game consisted of 3 levels with increasing difficulty changing the size and location of the target as well
+                    as introducing a wind mechanic as well as wind visuals.
+                  </p>
+                  <ul class="tags">
+                    <li>Python</li>
+                  </ul>
+                  <div class="project-links">
+                    <a class="link" href="https://github.com/YOUR_GITHUB/PROJECT1" target="_blank" rel="noreferrer">Code ↗</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 2 -->
+              <article class="project">
+                <img
+                  src="assets/project2.png"
+                  alt="Screenshot of Project 2"
+                  loading="lazy"
+                  onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22700%22 height=%22400%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e5e7eb%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%236b7280%22 font-family=%22Arial%22 font-size=%2220%22%3EAdd assets/project2.png%3C/text%3E%3C/svg%3E';"
+                />
+                <div class="project-body">
+                  <h3>Project 2: Portfolio Website</h3>
+                  <p>Created a portfolio website assisted with AI that included semi-advanced features like light/dark mode toggle
+                    smooth scrolling, highlighting, interactive intro.
+                  </p>
+                  <ul class="tags">
+                  </ul>
+                  <div class="project-links">
+                    <a class="link" href="https://github.com/YOUR_GITHUB/PROJECT2" target="_blank" rel="noreferrer">Code ↗</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Project 3 -->
+              <article class="project">
+                <img
+                  src="assets/project3.png"
+                  alt="Screenshot of Project 3"
+                  loading="lazy"
+                  onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22700%22 height=%22400%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%23e5e7eb%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%236b7280%22 font-family=%22Arial%22 font-size=%2220%22%3EAdd assets/project3.png%3C/text%3E%3C/svg%3E';"
+                />
+                <div class="project-body">
+                  <h3>Project 3: Coming soon
+                  </h3>
+                  <p></p>
+                  <ul class="tags">
+                  </ul>
+                  <div class="project-links">
+                    <a class="link" href="https://github.com/YOUR_GITHUB/PROJECT3" target="_blank" rel="noreferrer">Code ↗</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- skills/concentration -->
+        <section class="section" id="skills">
+          <div class="container">
+            <h2>Skills</h2>
+            <p class="muted">This section is simple but looks great to recruiters.</p>
+
+            <div class="skills">
+              <div class="skill-card">
+                <h3>Languages</h3>
+                <p>Python, Java</p>
+              </div>
+              <div class="skill-card">
+                <h3>Tools</h3>
+                <p>Git, GitHub, VS Code, Linux</p>
+              </div>
+              <div class="skill-card">
+                <h3>Focus</h3>
+                <p>Cybersecurity Fundamentals, Object-Oriented Programming, Troubleshooting</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ways to contact me -->
+        <section class="section" id="contact">
+          <div class="container">
+            <h2>Contact</h2>
+            <p class="lead">Want to collaborate or talk internships? Reach out.</p>
+            <div class="panel">
+              <h3>Links</h3>
+              <ul class="contact-list">
+                <li><a> ethanvo1208@gmail.com </a></li>
+                <li><a href="https://github.com/evo-sudo" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/ethan-vo-1a5568371" target="_blank">LinkedIn</a></li>
+              </ul>
+              <p class="muted small">
+                Open to internships, projects, and collaboration.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <p>© <span id="year"></span> Ethan. Built for 15-113.</p>
+          <a href="#top" class="link">Back to top ↑</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
