@@ -190,6 +190,8 @@ body.dark .subtitle { color: var(--muted); }
 body.dark .btn { border-color: var(--border); }
 
 .hero-links {
+  font-size: 1.5rem;
+  font-weight: 600;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
