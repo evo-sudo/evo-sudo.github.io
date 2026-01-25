@@ -3,40 +3,40 @@ const terminalScreen = document.getElementById("terminal-screen");
 const portfolio = document.getElementById("portfolio");
 const terminalBody = document.getElementById("terminalBody");
 
-if (terminalInput) {
+if (terminalInput && terminalScreen && portfolio && terminalBody) {
   terminalInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      const command = terminalInput.value.trim().toLowerCase();
+    if (e.key !== "Enter") return;
 
-      if (command === "resume.exe") {
-        terminalBody.innerHTML += `<p>Launching resume.exe...</p>`;
-        terminalScreen.classList.add("fade-out");
+    const command = terminalInput.value.trim().toLowerCase();
 
-        setTimeout(() => {
-          terminalScreen.style.display = "none";
-          portfolio.classList.remove("hidden");
-          portfolio.classList.add("fade-in");
-        }, 800);
-      } else if (command === "help") {
-        terminalBody.innerHTML += `<p>Available commands:</p>`;
-        terminalBody.innerHTML += `<p>- resume.exe</p>`;
-      } else {
-        terminalBody.innerHTML += `<p>'${command}' is not recognized as a command.</p>`;
-      }
+    if (command === "resume.exe") {
+      terminalBody.insertAdjacentHTML("beforeend", "<p>Launching resume.exe...</p>");
+      terminalScreen.classList.add("fade-out");
 
-      terminalInput.value = "";
-      terminalBody.scrollTop = terminalBody.scrollHeight;
-      const skipBtn = document.getElementById("skipIntro");
-      const terminalScreen = document.getElementById("terminal-screen");
-      const portfolio = document.getElementById("portfolio");
+      setTimeout(() => {
+        terminalScreen.style.display = "none";
+        portfolio.classList.remove("hidden");
+        portfolio.classList.add("fade-in");
 
-      skipBtn.addEventListener("click", () => {
-      terminalScreen.style.display = "none";
-      portfolio.classList.remove("hidden");
-      });
-  // optional: jump to main content
-  document.getElementById("main").focus?.();
+        // optional: jump to main content after reveal
+        document.getElementById("main")?.focus();
+      }, 800);
+
+    } else if (command === "help") {
+      terminalBody.insertAdjacentHTML(
+        "beforeend",
+        "<p>Available commands:</p><p>- resume.exe</p><p>- help</p>"
+      );
+
+    } else {
+      terminalBody.insertAdjacentHTML(
+        "beforeend",
+        `<p>'${command}' is not recognized as a command.</p>`
+      );
     }
+
+    terminalInput.value = "";
+    terminalBody.scrollTop = terminalBody.scrollHeight;
   });
 }
 
